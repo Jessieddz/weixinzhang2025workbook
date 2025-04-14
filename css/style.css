@@ -1,0 +1,25 @@
+body, html { 
+  margin: 0; padding: 0; }
+
+    canvas { 
+      display: block; }
+
+      /* 返回专用icon */
+
+      .left-corner-icon {
+        position: fixed;
+        top: 20px;     
+        left: 20px;     
+        z-index: 1000;
+        display: block;
+      }
+      
+      .left-corner-icon img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+      }
+      
+      
+      * {cursor:url(https://www.animatedimages.org/data/media/323/animated-insect-image-0170.gif), auto;
+      }
