@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interactives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" type="text/css" href="css\style.css">
+
+
+<style>
+
+body{
+  margin:0;
+  background:#138ec0;        /* 深色背景 */
+  font-family:'Winky Rough',cursive;
+  font-weight: 600;
+  color:#fff;
+}
+
+
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap:3vw;
+  padding:3vw;
+  justify-items:center;
+}
+
+.co{
+  grid-template-columns:repeat(1,1fr); 
+}
+
+.item{
+  text-decoration:none;
+  color:inherit;
+}
+
+
+
+
+/* —— 4. 圆形容器 —— */
+.circle{
+  position:relative;
+  width: 90%;                 
+  aspect-ratio:1/1;           
+  max-width:500px;           
+  border-radius:50%;
+  overflow:hidden;
+}
+
+/* —— 5. 圆内图片 —— */
+.circle img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  transition:filter .4s ease;
+}
+
+/* —— 6. 悬停文字（默认隐藏） —— */
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  padding: 0 10%;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  font-weight:700;
+  opacity:0;
+  transition:opacity .4s ease;
+  pointer-events:none;       
+}
+
+
+.item:hover .circle img{
+  filter:blur(4px) brightness(.7);
+}
+.item:hover .overlay{
+  opacity:1;
+}
+
+
+.caption{
+  margin-top:1rem;
+  text-align:center;
+  font-size:40px;
+}
+
+@media (min-width:600px){
+  .circle{width:500px;}
+}
+
+
+
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center; padding:3vw 0 0; font-size:6vw;">Inspiration</h1>
+
+<section class="gallery">
+
+  <!-- 第 1 个条目 -->
+  <a class="item" href="https://showcase.p5js.org/#/2022-All/me-and-you-then-us/">
+    <div class="circle">
+      <div class="co">
+      <img src="img4/inspiration-flower.gif" alt="week1">
+      <span class="overlay">This sketch is a combination of fonts, shapes, colors, and transformations. As the mouse moves, the pink cherry blossom surrounding the central font moves rapidly, from one whole to two individual circles. In this visual process, the "me" maintains coordinates in the center of the elements and rotates in place, not controlled by the mouse, thus maintaining the balance of readability and visual beauty.</span>
+    </div>
+    </div>
+    <p class="caption">me & you, then us </p>
+  </a>
+
+  <!-- 第 2 个条目 -->
+  <a class="item" href="https://showcase.p5js.org/#/2022-All/bubble-words/">
+    <div class="circle" >
+      <div class="co">
+      <img src="img7/BUBBLE-WORD.gif" alt="week2">
+      <span class="overlay">Through the movement of the mouse, the page shows the continuous iteration of words that disappear and reappear like bubbles, and in this process, the mouse touch will produce two different sounds similar to the technology of bubbles. In addition, the user can click the specified keys on the keyboard to change the color and type of the font.</span>
+    </div>
+    </div>
+    <p class="caption">BUBBLE WORDS</p>
+  </a>
+  
+  <!-- 第 3 个条目 -->
+  <a class="item" href="https://rozi.design/">
+    <div class="circle">
+      <div class="co">
+      <img src="img2/chongzi.gif" alt="week3">
+      <span class="overlay">Leave a series of sentences on a web page with the swipe of the mouse. More creatively, the page features several insects crawling around. I think it can be applied to my web design. </span>
+    </div>
+    </div>
+    
+    <p class="caption">ROZI ZHU's website</p>
+  </a>
+
+  <a class="item" href="https://yellowfellow.tv/" >
+    <div class="circle">
+      <div class="co">
+      <img src="img2/yaokuang.gif" alt="week3">
+      <span class="overlay">In this web page, there are many strange elements pasting around the font. When the mouse touches the element, the element changes color and the mouse turns into another graph. I think it's a very interesting design.</span>
+    </div>
+    </div>
+    
+    <p class="caption">Yellow Fellow</p>
+  </a>
+
+
+  <a class="item" href="https://cydn3yyy.com/" >
+    <div class="circle">
+      <div class="co">
+      <img src="img2/pagede.png" alt="week3">
+      <span class="overlay">The layout of the site is visually appealing. I like the journal-like structure, with tabs designed as linked modules that you can jump around.</span>
+    </div>
+    </div>
+    
+    <p class="caption">Cydn3yyy</p>
+  </a>
+
+  <a class="item" href="https://www.olivereekie.com/" >
+    <div class="circle">
+      <div class="co">
+      <img src="img2/xiaowangzi.png" alt="week3">
+      <span class="overlay">I was attracted by the watercolor style of the site. As you scroll through the page, images start to deconstruct and titles start to disappear.</span>
+    </div>
+    </div>
+    
+    <p class="caption">Olivereekie</p>
+  </a>
+
+  <a class="item" href="http://wenziyu.top/" >
+    <div class="circle">
+      <div class="co">
+      <img src="img2/yu.png" alt="week3">
+      <span class="overlay">This site is very beautiful. Broken letters fall like rain, moving in the direction of the mouse as they fall.</span>
+    </div>
+    </div>
+    <p class="caption">Wenziyu's website</p>
+</a>
+
+    <a class="item" href="https://a-3-i.com/" >
+        <div class="circle">
+          <div class="co">
+          <img src="img3/zhuanyi.gif" alt="week3">
+          <span class="overlay">It's a very minimalist site, but the designers have set a fixed element that changes from an image to a video when the mouse touches it. When the mouse slides left and right, the background of the website swings from side to side. I also like the layout and might use it on my web page.</span>
+        </div>
+        </div>
+    
+    <p class="caption">A-3-i</p>
+  </a>
+
+  <a class="item"  >
+    <div class="circle">
+      <div class="co">
+      <img src="img2\441b22eb9536d67ef5b697d519bb73e.jpg" alt="week3">
+      <span class="overlay">This is a picture created by Daniel. He visualizes concepts through geometry, abstract composition, and strong color contrasts, and this way of thinking is very inspiring for typography (how to cut out the heavy elements and retain the core information). In general, his design tells me to break the traditional narrative mode and express the core information with the least visual elements.</span>
+    </div>
+    </div>
+
+<p class="caption">Daniel Lievano</p>
+</a>
+
+   <a href="mainp.html" class="left-corner-icon" >
+    <img src="img/backbutton.png" alt="Icon" >
+  </a>
+
+ 
+  
+</section>
+
+</body>
+</html>

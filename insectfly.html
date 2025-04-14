@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>原地转圈的昆虫</title>
+  <style>
+
+body, html { 
+  margin: 0; padding: 0; }
+
+    canvas { 
+      display: block; }
+      
+      .container {
+      position: relative;  
+      width: 500px;
+      height: 500px;
+      margin: 50px auto;
+    }
+    .insect {
+      position: absolute;  
+      top: 100px;         
+      left: 150px;         
+      width: 100px;
+      height: 100px;
+      background: url("https://www.animatedimages.org/data/media/323/animated-insect-image-0048.gif")
+        no-repeat center center;
+      background-size: contain;
+    }
+   
+    .insect:hover {
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+  <div class="insect"></div>
+    </div>
+</body>
+</html>
